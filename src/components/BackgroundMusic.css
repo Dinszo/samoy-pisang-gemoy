@@ -1,0 +1,135 @@
+/* Fixed bottom-left to avoid the MoodChatbot at bottom-right */
+.samoy-music-control {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  z-index: 1001;
+  font-family: "DM Sans", sans-serif;
+}
+.samoy-music-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 0 16px;
+  border: 1.5px solid #48251f;
+  border-radius: 999px;
+  background: #fff1bf;
+  color: #48251f;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(72, 37, 31, 0.13);
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+.samoy-music-button:hover {
+  transform: translateY(-3px);
+}
+.samoy-music-button:focus-visible {
+  outline: 3px solid #d56f91;
+  outline-offset: 3px;
+}
+.samoy-music-button.is-playing {
+  background: #dafa6c;
+}
+.samoy-music-error {
+  display: block;
+  max-width: 230px;
+  margin-top: 6px;
+  padding: 6px 9px;
+  border-radius: 8px;
+  background: #fffdf9;
+  color: #48251f;
+  font-size: 11px;
+}
+@media (max-width: 480px) {
+  .samoy-music-control {
+    left: 15px;
+    bottom: 15px;
+  }
+  .samoy-music-button {
+    min-height: 44px;
+    padding: 0 12px;
+    gap: 7px;
+  }
+  .samoy-music-label {
+    font-size: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .samoy-music-button {
+    transition: none;
+  }
+}
+
+/* BACKSOUND BUTTON - NAVBAR PILL STYLE */
+
+.site-nav .samoy-music-control {
+  position: relative;
+  inset: auto;
+  margin: 0 0 0 4px;
+  flex-shrink: 0;
+}
+
+.site-nav .samoy-music-button {
+  width: auto;
+  min-width: 50px;
+  height: 15px;
+  padding: 0 10px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  border: 1.5px solid #48251f;
+  border-radius: 999px;
+
+  background: #fff1bf;
+  color: #48251f;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.site-nav .samoy-music-button:hover {
+  background: #ffe69b;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(72, 37, 31, 0.12);
+}
+
+.site-nav .samoy-music-button svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 700px) {
+  .site-nav .samoy-music-button {
+    min-width: 150px;
+    height: 42px;
+    padding: 0 14px;
+    gap: 9px;
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-nav .samoy-music-button {
+    transition: none;
+  }
+}
