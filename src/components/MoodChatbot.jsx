@@ -31,7 +31,7 @@ const recommendationPhotos = {
     note: "Foto Cokelat dengan Additional Keju",
   },
   heartbreak: {
-    src: "/images/pisang-imut-straw-coklat.png",
+    src: "/images/pisang-imut-straw-cokltat.png",
     product: "Pisang Imut",
     note: "Foto varian Stroberi Cokelat",
   },
